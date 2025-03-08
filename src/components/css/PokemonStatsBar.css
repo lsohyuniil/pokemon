@@ -1,0 +1,50 @@
+.chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+}
+
+.total-stats {
+    font-size: small;
+}
+
+.percentages-list {
+    display: flex;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.stat-name {
+    width: 20%;
+    margin-right: 5px;
+    text-align: left;
+    font-size: medium;
+}
+
+.bar-default {
+    width: 70%; 
+    background-color: #f0f0f0; 
+    border-radius: 5px;
+}
+
+.stat-value {
+    float: right;
+    margin-right: 3%;
+    line-height: 1.5;
+}
+
+.stat-percentage {
+    background-color: #1E90FF;
+    height: 20px;
+    border-radius: 5px;
+    height: 100%;
+}
+
+.total-stats {
+    width: 90%; 
+    text-align: center;
+    font-size: 1.2rem;
+}

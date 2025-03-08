@@ -1,0 +1,22 @@
+.up-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    background-color: white;
+    color: black;
+    border: 1px solid #555558;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(90deg);
+    cursor: pointer;
+    box-shadow: 0 0 0 1px #dadcdf, 0 4px 8px 0 rgba(0, 0, 0, .15);
+}
+
+.up-btn:hover {
+    background-color: #f7f7f8;
+}

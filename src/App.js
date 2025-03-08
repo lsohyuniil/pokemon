@@ -1,0 +1,29 @@
+import { Routes, Route } from 'react-router-dom';
+import { useState } from 'react';
+import Home from "./pages/Home";
+import Header from "./layout/Header";
+import PokemonDetail from "./pages/PokemonDetail";
+import SearchPage from "./pages/SearchPage";
+import ScrollTopButton from "./components/ScrollTopButton";
+
+function App() {
+  const [selectedTypes, setSelectedTypes] = useState({});
+
+  return (
+    <>
+      <Header selectedTypes={selectedTypes} setSelectedTypes={setSelectedTypes} />
+      <main>
+        {/* <ScrollToTop /> */}
+        <Routes>
+          <Route path="/" element={<Home selectedTypes={selectedTypes} />} />
+          <Route path="/pokemon/:id" element={<PokemonDetail />} />
+          <Route path="/search" element={<SearchPage />} />
+        </Routes>
+        <ScrollTopButton />
+      </main>
+      {/* <Footer /> */}
+    </>
+  );
+}
+
+export default App;

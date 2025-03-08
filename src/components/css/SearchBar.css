@@ -1,0 +1,51 @@
+.bar {
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
+}
+
+.search-bar {
+    width: 300px;
+    height: 20px;
+    border: 0;
+    border-bottom: 2px solid black;
+    /* padding: 10px 10px 0 0; */
+    text-align: left;
+    margin-top: auto;
+    margin-left: auto;
+    font-size: medium;
+}
+
+.search-bar:focus {
+    outline:none;
+}
+
+form {
+    position: relative;
+}
+
+.img-btn {
+    position: absolute;
+    right: 4px;
+    bottom: 2px;
+    background: url("../../image/poke_ball_icon.png") no-repeat center;
+    background-size: contain;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .search-bar {
+        width: 220px;
+        font-size: .9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-bar {
+        width: 200px;
+        font-size: small;
+    }
+}

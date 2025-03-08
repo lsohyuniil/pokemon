@@ -1,0 +1,28 @@
+.header {
+    box-sizing: border-box;
+    max-width: 100vw;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 10px 7%; */
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    z-index: 2;
+    border-bottom: 3px solid black;
+}
+
+.header > a > img {
+    padding: 5% 20%;
+}
+
+.div-container {
+    width:100%; 
+    height:200px; 
+}
+
+@media (max-width: 480px) {
+    .header > a > img {
+        padding: 10%;
+    }
+}
