@@ -32,7 +32,6 @@ const PokemonDetail = () => {
 
         try {
             const data = await fetchEvolutionList(pokemonData.evolution);
-            console.log("Evolution Data:", data);
             setEvolutionList(data);
         } catch (error) {
             console.error("Error fetching evolution data:", error);

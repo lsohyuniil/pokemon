@@ -5,12 +5,13 @@ import Header from "./layout/Header";
 import PokemonDetail from "./pages/PokemonDetail";
 import SearchPage from "./pages/SearchPage";
 import ScrollTopButton from "./components/ScrollTopButton";
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   const [selectedTypes, setSelectedTypes] = useState({});
 
-  return (
-    <>
+  return ( 
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Header selectedTypes={selectedTypes} setSelectedTypes={setSelectedTypes} />
       <main>
         {/* <ScrollToTop /> */}
@@ -22,7 +23,7 @@ function App() {
         <ScrollTopButton />
       </main>
       {/* <Footer /> */}
-    </>
+    </BrowserRouter> 
   );
 }
 
