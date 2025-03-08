@@ -18,7 +18,7 @@ function Header ({ selectedTypes, setSelectedTypes }) {
     <>
       <header className="header">
         <a href='/'>
-          <img src='/pokemon_logo.png' alt='pokemon_logo'></img>
+          <img src={`${process.env.PUBLIC_URL}/pokemon_logo.png`} alt="pokemon_logo" />
         </a>
         <SearchBar/>
         {showFilterButton && 
