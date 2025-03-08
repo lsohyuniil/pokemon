@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { fetchPokemonData } from "../services/pokemonService";
 import "./css/PokemonCard.css";
 import PokemonTypeBadge from "./PokemonTypeBadge"
+import { Link } from "react-router-dom";
 
 function PokemonCard ({ index }) {
     const [pokemonData, setPokemonData] = useState(null);
@@ -24,7 +25,7 @@ function PokemonCard ({ index }) {
     if (!pokemonData) return <div></div>;
 
     return (
-        <a className="pokemon-card" href={`/pokemon/${pokemonData.id}`}>
+        <Link className="pokemon-card"  to={`/pokemon/${pokemonData.id}`}>
             <div className="pokemon-name-container">
                 <span className="pokemon-id">No.{pokemonData.id}</span>
                 <span className="pokemon-name">{pokemonData.koreanName}</span>
@@ -36,7 +37,7 @@ function PokemonCard ({ index }) {
                     <PokemonTypeBadge key={type} type={type} />
                 ))}
             </div>
-        </a>
+        </Link>
     );
 };
 

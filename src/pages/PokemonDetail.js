@@ -5,6 +5,7 @@ import PokemonTypeBadge from '../components/PokemonTypeBadge';
 import "./css/PokemonDetail.css"
 import PokemonStatsGraph from "../components/PokemonStatsGraph"
 import PokemonCard from '../components/PokemonCard'
+import { Link } from 'react-router-dom';
 
 const PokemonDetail = () => {
   const { id } = useParams();
@@ -46,12 +47,12 @@ const PokemonDetail = () => {
   return (
     <div className='box'>
       <div className='page-btns'>
-        <a className='prev-btn' href={`/pokemon/${pokemonId === 1 ? 1025 : pokemonId - 1}`}>
+        <Link className='prev-btn' to={`/pokemon/${pokemonId === 1 ? 1025 : pokemonId - 1}`}>
           &lt; No.{pokemonId === 1 ? 1025 : pokemonId - 1} {pokemonData.이전포켓몬이름}
-        </a>
-        <a className='next-btn' href={`/pokemon/${pokemonId === 1025 ? 1 : pokemonId + 1}`}>
+        </Link>
+        <Link className='next-btn' to={`/pokemon/${pokemonId === 1025 ? 1 : pokemonId + 1}`}>
           No.{pokemonId === 1025 ? 1 : pokemonId + 1} {pokemonData.다음포켓몬이름} &gt; 
-        </a>
+        </Link>
       </div>
 
       <div className='pokemon-detail'>
@@ -119,7 +120,7 @@ const PokemonDetail = () => {
             ))}
           </div>
         </div>
-        <a className='list-btn' href="/">목록</a>
+        <Link className='list-btn' to="/">목록</Link>
       </div>
     </div>
   );

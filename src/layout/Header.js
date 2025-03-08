@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from "react";
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import "./Header.css"
 import SearchBar from "../components/SearchBar";
@@ -17,9 +17,9 @@ function Header ({ selectedTypes, setSelectedTypes }) {
   return (
     <>
       <header className="header">
-        <a href='/'>
+        <Link to='/'>
           <img src={`${process.env.PUBLIC_URL}/pokemon_logo.png`} alt="pokemon_logo" />
-        </a>
+        </Link>
         <SearchBar/>
         {showFilterButton && 
           <FilterButtons selectedTypes={selectedTypes} setSelectedTypes={setSelectedTypes} isOpen={isFilterOpen} setIsOpen={setIsFilterOpen}/>
